@@ -85,7 +85,7 @@
             text-align: right;
         }
         .portfolio {
-            text-align: left;
+            text-align: center;
         }
         .contact {
             text-align: right;
@@ -103,10 +103,52 @@
             font-weight: bold;
             border-radius: 5px;
         }
+        .portfolio-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
         .portfolio img {
-            margin: 10px;
-            max-width: 100%;
-            height: auto;
+            width: 3in;
+            height: 2in;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
         footer {
             background-color: #1a5f7a;
@@ -159,9 +201,11 @@
         <section id="portfolio" class="portfolio">
             <h2>Our Work</h2>
             <p>Check out some of our stunning installations:</p>
-            <img src="Christmas Light Gallery/residential-installation.jpg" alt="Residential Installation">
-            <img src="Christmas Light Gallery/commercial-display.jpg" alt="Commercial Display">
-            <img src="Christmas Light Gallery/custom-design.jpg" alt="Custom Design">
+            <div class="portfolio-images">
+                <img src="Christmas Light Gallery/residential-installation.jpg" alt="Residential Installation" onclick="openModal(this.src)">
+                <img src="Christmas Light Gallery/commercial-display.jpg" alt="Commercial Display" onclick="openModal(this.src)">
+                <img src="Christmas Light Gallery/custom-design.jpg" alt="Custom Design" onclick="openModal(this.src)">
+            </div>
         </section>
 
         <section id="contact" class="contact">
@@ -172,8 +216,27 @@
         </section>
     </div>
 
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
+
     <footer>
         <p>&copy; 2024 Bay Area Festive Lights. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openModal(imgSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("expandedImg");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
