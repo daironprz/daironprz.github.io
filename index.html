@@ -16,6 +16,59 @@
             padding-top: 130px;
             background-color: #f0f0f0;
         }
+        .hero {
+            position: relative;
+            height: calc(100vh - 130px);
+            overflow: hidden;
+        }
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-image.active {
+            opacity: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 20vh;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay Area Festive Lights - Premium Christmas Light Installation</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding-top: 130px;
+            background-color: #f0f0f0;
+        }
         header {
             background-color: #d43a22;
             color: white;
@@ -56,15 +109,34 @@
             border-radius: 5px;
         }
         .hero {
-            background-image: url('path/to/your/hero-image.jpg');
-            background-size: cover;
+            position: relative;
             height: calc(100vh - 130px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('path/to/image1.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: cycleBackgrounds 20s infinite;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            padding: 20px;
+        }
+        @keyframes cycleBackgrounds {
+            0%, 100% { background-image: url('path/to/image1.jpg'); }
+            33% { background-image: url('path/to/image2.jpg'); }
+            66% { background-image: url('path/to/image3.jpg'); }
         }
         .content {
             max-width: 1200px;
@@ -130,10 +202,11 @@
             background-color: rgba(0,0,0,0.9);
         }
         .modal-content {
-            margin: auto;
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
             display: block;
-            width: 80%;
-            max-width: 700px;
+            margin: auto;
         }
         .close {
             position: absolute;
@@ -173,7 +246,7 @@
     </nav>
 
     <div id="home" class="hero">
-        <div>
+        <div class="hero-content">
             <h2>Illuminate Your Holidays</h2>
             <p>Professional Christmas light installation for homes and businesses in the Bay Area</p>
             <a href="#contact" class="cta-button">Get a Free Quote</a>
@@ -237,6 +310,19 @@
             var modal = document.getElementById("imageModal");
             modal.style.display = "none";
         }
+
+        function adjustHeroHeight() {
+            const hero = document.querySelector('.hero');
+            const header = document.querySelector('header');
+            const nav = document.querySelector('nav');
+            const windowHeight = window.innerHeight;
+            const headerHeight = header.offsetHeight;
+            const navHeight = nav.offsetHeight;
+            hero.style.height = `${windowHeight - headerHeight - navHeight}px`;
+        }
+
+        window.addEventListener('load', adjustHeroHeight);
+        window.addEventListener('resize', adjustHeroHeight);
     </script>
 </body>
 </html>
