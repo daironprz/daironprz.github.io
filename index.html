@@ -2,287 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silicon Valley Lights - Premium Christmas Light Installation</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding-top: 130px;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #d43a22;
-            color: white;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            padding: 10px 0;
-        }
-        nav {
-            background-color: #e0e0e0;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 80px;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 15px;
-            margin: 0 5px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #1a5f7a;
-            border-radius: 5px;
-        }
-        .hero {
-            background-size: cover;
-            background-position: center;
-            height: calc(100vh - 130px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .services, .about, .portfolio, .contact {
-            background-color: white;
-            margin: 20px 0;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .services {
-            text-align: left;
-        }
-        .about {
-            text-align: center;
-        }
-        .portfolio {
-            text-align: center;
-        }
-        .contact {
-            text-align: right;
-        }
-        .services ul {
-            text-align: left;
-            display: inline-block;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ff9f1c;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .portfolio-images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            height: 300px;
-        }
-        .portfolio img {
-            width: 3in;
-            height: 2in;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .portfolio img:hover {
-            transform: scale(1.05);
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.9);
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #1a5f7a;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>Silicon Valley Lights</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Silicon Valley Lights</h1>
+        <div class="logo">
+            <h1>Silicon Valley Lights</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Our Work</a></li>
+                <li><a href="#contact">Get a Quote</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Brighten Up Your Holidays with Silicon Valley Lights</h2>
+        <p>Professional Christmas Light Installation in the Heart of Silicon Valley</p>
+        <a href="#contact" class="cta-button">Book Now</a>
+    </section>
 
-    <div id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <h2>Illuminate Your Holidays</h2>
-            <p>Professional Christmas light installation for homes and businesses in the Bay Area</p>
-            <a href="#contact" class="cta-button">Get a Free Quote</a>
-        </div>
-    </div>
-
-    <div class="content">
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Residential Christmas Light Installation</li>
-                <li>Commercial Holiday Lighting</li>
-                <li>Custom Design and Planning</li>
-                <li>Timely Installation and Removal</li>
-                <li>Energy-Efficient LED Lighting Options</li>
-                <li>Maintenance Throughout the Season</li>
-            </ul>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Silicon Valley Lights</h2>
-            <p>Silicon Valley Lights has been brightening homes and businesses since 2019, delivering stunning and personalized holiday light installations. Our commitment to exceptional customer service has earned us rave reviews from our clients, and we take pride in making every installation hassle-free and tailored to your vision. From design to takedown, we ensure a seamless experience with quality, energy-efficient lighting. Let us help make your holidays truly magical!</p>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-            <h2>Our Work</h2>
-            <p>Check out some of our stunning installations:</p>
-            <div class="portfolio-images">
-                <img src="Christmas Light Gallery/residential-installation.jpg" alt="Residential Installation" onclick="openModal(this.src)">
-                <img src="Christmas Light Gallery/commercial-display.png" alt="Commercial Display" onclick="openModal(this.src)">
-                <img src="Christmas Light Gallery/custom-design.png" alt="Custom Design" onclick="openModal(this.src)">
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Residential Installation</h3>
+                <p>Transform your home into a winter wonderland.</p>
             </div>
-        </section>
+            <div class="service">
+                <h3>Commercial Installation</h3>
+                <p>Make your business shine this holiday season.</p>
+            </div>
+            <div class="service">
+                <h3>Custom Designs</h3>
+                <p>Unique lighting designs tailored to your vision.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <p>Ready to light up your holidays? Get in touch for a free consultation and quote!</p>
-            <p>Phone: (555) 123-4567</p>
-            <p>Email: info@bayareafestivelights.com</p>
-        </section>
-    </div>
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-container">
+            <!-- Add your images here -->
+            <img src="images/photo1.jpg" alt="Project 1">
+            <img src="images/photo2.jpg" alt="Project 2">
+            <img src="images/photo3.jpg" alt="Project 3">
+            <img src="images/photo4.jpg" alt="Project 4">
+        </div>
+    </section>
 
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="expandedImg">
-    </div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get a Quote</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Silicon Valley Lights. All rights reserved.</p>
+        <p>&copy; 2023 Silicon Valley Lights. All rights reserved.</p>
+        <div class="social-media">
+            <!-- Add social media links if you have them -->
+            <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt="Twitter"></a>
+        </div>
     </footer>
-
-    <script>
-        function openModal(imgSrc) {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("expandedImg");
-            modal.style.display = "block";
-            modalImg.src = imgSrc;
-        }
-
-        function closeModal() {
-            var modal = document.getElementById("imageModal");
-            modal.style.display = "none";
-        }
-
-        // Background image cycling
-        const backgroundImages = [
-            'Christmas Light Gallery/background1.jpg',
-            'Christmas Light Gallery/background2.jpg',
-            'Christmas Light Gallery/background3.jpg'
-        ];
-        let currentBackgroundIndex = 0;
-
-        function changeBackground() {
-            const heroBackground = document.querySelector('.hero-background');
-            heroBackground.style.opacity = 0;
-            
-            setTimeout(() => {
-                heroBackground.style.backgroundImage = `url(${backgroundImages[currentBackgroundIndex]})`;
-                heroBackground.style.opacity = 1;
-                currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.length;
-            }, 1000);
-        }
-
-        // Initial background setup
-        document.querySelector('.hero-background').style.backgroundImage = `url(${backgroundImages[0]})`;
-        document.querySelector('.hero-background').style.opacity = 1;
-
-        // Change background every 5 seconds
-        setInterval(changeBackground, 5000);
-    </script>
 </body>
 </html>
