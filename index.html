@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Silicon Valley Lights</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </head>
 <body>
     <!-- Header Section -->
@@ -13,9 +19,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Our Work</a></li>
-                <li><a href="#contact">Get a Quote</a></li>
+                <li><a href="#services" class="nav-button services-button">Services</a></li>
+                <li><a href="#gallery" class="nav-button work-button">Our Work</a></li>
+                <li><a href="#contact" class="nav-button contact-button">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -25,6 +31,13 @@
         <h2>Brighten Up Your Holidays with Silicon Valley Lights</h2>
         <p>Professional Christmas Light Installation in the Heart of Silicon Valley</p>
         <a href="#contact" class="cta-button">Book Now</a>
+    </section>
+
+    <!-- Promotional Section -->
+    <section id="promotion">
+        <h2>Early Bird Special</h2>
+        <p>Save <strong>20%</strong> on installations by leaving a deposit and booking early!</p>
+        <a href="#contact" class="promo-button">Get Your Discount</a>
     </section>
 
     <!-- Services Section -->
@@ -46,15 +59,21 @@
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section id="service-area">
+        <h2>Our Service Area</h2>
+        <div id="map"></div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery">
         <h2>Our Work</h2>
         <div class="gallery-container">
-            <!-- Add your images here -->
-            <img src="images/photo1.jpg" alt="Project 1">
-            <img src="images/photo2.jpg" alt="Project 2">
-            <img src="images/photo3.jpg" alt="Project 3">
-            <img src="images/photo4.jpg" alt="Project 4">
+            <!-- Clickable images -->
+            <a href="images/photo1.jpg"><img src="images/photo1.jpg" alt="Project 1"></a>
+            <a href="images/photo2.jpg"><img src="images/photo2.jpg" alt="Project 2"></a>
+            <a href="images/photo3.jpg"><img src="images/photo3.jpg" alt="Project 3"></a>
+            <a href="images/photo4.jpg"><img src="images/photo4.jpg" alt="Project 4"></a>
         </div>
     </section>
 
@@ -82,11 +101,37 @@
     <footer>
         <p>&copy; 2023 Silicon Valley Lights. All rights reserved.</p>
         <div class="social-media">
-            <!-- Add social media links if you have them -->
+            <!-- Social media links -->
             <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
             <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
             <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt="Twitter"></a>
         </div>
     </footer>
+
+    <!-- JavaScript for Google Maps -->
+    <script>
+        function initMap() {
+            var bridgeLocation = {lat: 37.5960, lng: -122.1332}; // Approximate coordinates of the San Mateo-Hayward Bridge
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: bridgeLocation,
+                zoom: 8
+            });
+
+            // Draw a circle with a 70-mile radius
+            var serviceAreaCircle = new google.maps.Circle({
+                strokeColor: '#e63946',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#e63946',
+                fillOpacity: 0.35,
+                map: map,
+                center: bridgeLocation,
+                radius: 112654  // 70 miles in meters
+            });
+        }
+
+        // Initialize the map when the window loads
+        window.onload = initMap;
+    </script>
 </body>
 </html>
