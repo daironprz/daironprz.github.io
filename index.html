@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Google Maps JavaScript API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -19,9 +19,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#services" class="nav-button services-button">Services</a></li>
-                <li><a href="#gallery" class="nav-button work-button">Our Work</a></li>
-                <li><a href="#contact" class="nav-button contact-button">Contact Us</a></li>
+                <li><a href="#services" class="nav-button">Services</a></li>
+                <li><a href="#gallery" class="nav-button">Our Work</a></li>
+                <li><a href="#contact" class="nav-button">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -62,18 +62,20 @@
     <!-- Map Section -->
     <section id="service-area">
         <h2>Our Service Area</h2>
-        <div id="map"></div>
+        <div id="map">
+            <img src="images/service-area-map.jpg" alt="Service Area Map - 70 Miles from the Hayward Bridge" style="width: 100%; max-width: 1200px; height: auto;">
+        </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery">
         <h2>Our Work</h2>
         <div class="gallery-container">
-            <!-- Clickable images -->
-            <a href="images/photo1.jpg"><img src="images/photo1.jpg" alt="Project 1"></a>
-            <a href="images/photo2.jpg"><img src="images/photo2.jpg" alt="Project 2"></a>
-            <a href="images/photo3.jpg"><img src="images/photo3.jpg" alt="Project 3"></a>
-            <a href="images/photo4.jpg"><img src="images/photo4.jpg" alt="Project 4"></a>
+            <!-- Clickable images with Lightbox -->
+            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
+            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
+            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
+            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4"></a>
         </div>
     </section>
 
@@ -99,7 +101,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Silicon Valley Lights. All rights reserved.</p>
+        <p>&copy; 2024 Silicon Valley Lights. All rights reserved.</p>
         <div class="social-media">
             <!-- Social media links -->
             <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
@@ -108,30 +110,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Google Maps -->
-    <script>
-        function initMap() {
-            var bridgeLocation = {lat: 37.5960, lng: -122.1332}; // Approximate coordinates of the San Mateo-Hayward Bridge
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: bridgeLocation,
-                zoom: 8
-            });
-
-            // Draw a circle with a 70-mile radius
-            var serviceAreaCircle = new google.maps.Circle({
-                strokeColor: '#e63946',
-                strokeOpacity: 0.8,
-                strokeWeight: 2,
-                fillColor: '#e63946',
-                fillOpacity: 0.35,
-                map: map,
-                center: bridgeLocation,
-                radius: 112654  // 70 miles in meters
-            });
-        }
-
-        // Initialize the map when the window loads
-        window.onload = initMap;
-    </script>
+    <!-- Lightbox JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
