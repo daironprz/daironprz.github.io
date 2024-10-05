@@ -11,16 +11,37 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header style="background-color: #004643; padding: 20px 0;">
-    <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <header style="background-color: #004643; padding: 5px 0;">
+    <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 10px; flex-wrap: wrap;">
+        <style>
+            @media (max-width: 768px) {
+                .header-container {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 0 15px;
+                }
+                .nav-button {
+                    padding: 8px 15px;
+                    margin-bottom: 5px;
+                    width: 100%;
+                    text-align: center;
+                }
+                .logo img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        </style>
         <div class="logo" style="display: flex; align-items: center; gap: 15px;">
             <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 100px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
             <h1 style="color: #ffffff; font-weight: bold;">Silicon Valley Lights</h1>
         </div>
         <nav>
             <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
-                <li><a href="index.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 5px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Home</a></li>
-                <li><a href="#blog-content" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 5px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Blog</a></li>
+                <li><a href="#services" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Services</a></li>
+                <li><a href="#gallery" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Our Work</a></li>
+                <li><a href="#contact" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Contact Us</a></li>
+                <li><a href="blog.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease;">Blog</a></li>
             </ul>
         </nav>
     </div>
@@ -33,25 +54,25 @@
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: center;">
                 <a href="#tips-tricks">
                     <img src="images/tips-tricks.jpg" alt="Tips and Tricks" style="width: 100%; height: 300px; object-fit: cover;">
-                    <h3>Tips & Tricks for Christmas Light Installations</h3>
+                    <h3 style="text-align: left;">Tips & Tricks for Christmas Light Installations</h3>
                 </a>
             </div>
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: center;">
                 <a href="#faq">
                     <img src="images/faq.jpg" alt="FAQ" style="width: 100%; height: 300px; object-fit: cover;">
-                    <h3>FAQ: Everything You Need to Know</h3>
+                    <h3 style="text-align: left;">FAQ: Everything You Need to Know</h3>
                 </a>
             </div>
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: center;">
                 <a href="#lighting-design">
                     <img src="images/lighting-design.jpg" alt="Lighting Design" style="width: 100%; height: 300px; object-fit: cover;">
-                    <h3>Types of Lighting Design and Their Benefits</h3>
+                    <h3 style="text-align: left;">Types of Lighting Design and Their Benefits</h3>
                 </a>
             </div>
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: center;">
                 <a href="#cost-savings">
                     <img src="images/cost-savings.jpg" alt="Cost Savings" style="width: 100%; height: 300px; object-fit: cover;">
-                    <h3>How Professional Installation Saves You Money</h3>
+                    <h3 style="text-align: left;">How Professional Installation Saves You Money</h3>
                 </a>
             </div>
         </div>
