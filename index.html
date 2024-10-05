@@ -15,8 +15,27 @@
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 5px 0;">
     <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 10px; flex-wrap: wrap;">
+            <style>
+                @media (max-width: 768px) {
+                    .header-container {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0 15px;
+                    }
+                    .nav-button {
+                        padding: 8px 15px;
+                        margin-bottom: 5px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .logo img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            </style>
         <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 100px; vertical-align: middle;">
+            <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 100px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
             <h1 style="color: #ffffff; font-weight: bold;">Silicon Valley Lights</h1>
         </div>
         <nav>
@@ -95,7 +114,7 @@
     <!-- Gallery Section -->
     <section id="gallery">
         <h2>Our Work</h2>
-        <div class="gallery-container" style="margin-bottom: 100px;">
+        <div class="gallery-container" style="margin-bottom: 150px;">
             <!-- Clickable images with Lightbox -->
             <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
             <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
