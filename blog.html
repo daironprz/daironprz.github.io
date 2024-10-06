@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicon for the browser tab -->
-    <link rel="icon" href="images/logo-icon.png" type="image/png">
-    <title>Silicon Valley Lights</title>
-    <!-- Link to the external CSS file for the main styles -->
+    <meta charset="UTF-8">
+    <title>Silicon Valley Lights Blog</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Lightbox CSS for gallery functionality -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 0;">
-        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 40px; flex-wrap: wrap;">
-            <!-- Media query for responsive header adjustments -->
+        <!-- Header container to organize logo and navigation links -->
+        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 60px; flex-wrap: wrap;">
             <style>
+                /* Responsive styles for smaller screens */
                 @media (max-width: 768px) {
                     .header-container {
                         flex-direction: column;
@@ -37,195 +34,94 @@
                     }
                 }
             </style>
-            <!-- Logo and title for the website -->
+            <!-- Logo section -->
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-                <a href="index.html">
-                    <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 80px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
-                </a>
-                <h1 style="color: #ffffff; font-weight: bold; font-family: 'Playfair Display', serif;"><a href="index.html" style="color: inherit; text-decoration: none;">Silicon Valley Lights</a></h1>
+                <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 80px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
+                <h1 style="color: #ffffff; font-weight: bold; font-family: 'Playfair Display', serif;">Silicon Valley Lights</h1>
             </div>
-            <!-- Navigation menu for different sections of the website -->
+            <!-- Navigation links -->
             <nav>
-                <ul style="list-style: none; display: flex; gap: 20px; padding: 10px 0; margin: 0; align-items: center;">
-                    <li><a href="index.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Home</a></li>
+                <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
+                    <li><a href="index.html#services" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Services</a></li>
+                    <li><a href="index.html#gallery" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Our Work</a></li>
+                    <li><a href="index.html#contact" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Contact Us</a></li>
                     <li><a href="blog.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Blog</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section with a call to action for users -->
-    <section class="hero">
-        <h2 style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: 'Playfair Display', serif;">🎄Brighten Up Your Holidays with Silicon Valley Lights🎄</h2>
-        <p style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: 'Playfair Display', serif;">Professional Christmas Light Installation in the Heart of Silicon Valley</p>
-        <a href="#contact" class="cta-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Book Now</a>
-    </section>
-
-    <!-- Promotional Section for early bird discounts -->
-    <section id="promotion">
-        <h2 style="font-family: 'Playfair Display', serif;">Early Bird Special</h2>
-        <p style="font-family: 'Playfair Display', serif;">Save <strong>20%</strong> on installations by leaving a deposit and booking early!</p>
-        <a href="#contact" class="promo-button" style="background-color: #d4af37; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Get Your Discount</a>
-    </section>
-
-    <!-- Services Section describing different types of services offered -->
-    <section id="services">
-        <h2 style="font-family: 'Playfair Display', serif;">Our Services</h2>
-        <div class="services-container">
-            <!-- Residential Installation Service -->
-            <div class="service">
-                <img src="icons/residential-icon.png" alt="Residential Icon" style="width: 200px; height: 200px;">
-                <h3 style="font-family: 'Playfair Display', serif;">Residential Installation</h3>
-                <ul style="text-align: left; padding-left: 20px;">
-                    <li>Custom holiday lighting design tailored to your home's architecture.</li>
-                    <li>Energy-efficient LED lights for a vibrant and cost-effective display.</li>
-                    <li>Professional installation, maintenance, and removal services.</li>
-                    <li>Safe and secure setup, including careful handling of roofs, gutters, and landscaping.</li>
-                </ul>
+    <!-- Blog Section -->
+    <section id="blog-content" style="text-align: left;">
+        <h2 style="font-family: 'Playfair Display', serif;">Our Blog</h2>
+        <!-- Blog items container to hold individual blog entries -->
+        <div class="blog-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <!-- Individual blog item -->
+            <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
+                <a href="#tips-tricks" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <img src="images/tips-tricks.jpg" alt="Tips and Tricks" style="width: 100%; height: 300px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <h3 style="text-align: left; font-family: 'Playfair Display', serif;">Tips & Tricks for Christmas Light Installations</h3>
+                </a>
             </div>
-            <!-- Commercial Installation Service -->
-            <div class="service">
-                <img src="icons/commercial-icon.png" alt="Commercial Icon" style="width: 200px; height: 200px;">
-                <h3 style="font-family: 'Playfair Display', serif;">Commercial Installation</h3>
-                <ul style="text-align: left; padding-left: 20px;">
-                    <li>Eye-catching lighting solutions that enhance your business's holiday spirit.</li>
-                    <li>LED installations designed to attract more foot traffic and boost customer engagement.</li>
-                    <li>Professional installation and prompt service to minimize disruption to your business.</li>
-                    <li>Weather-resistant and durable lighting to withstand high-traffic environments.</li>
-                </ul>
+            <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
+                <a href="#faq">
+                    <img src="images/faq.jpg" alt="FAQ" style="width: 100%; height: 300px; object-fit: cover;">
+                    <h3 style="font-family: 'Playfair Display', serif; text-align: left;">FAQ: Everything You Need to Know</h3>
+                </a>
             </div>
-            <!-- Custom Lighting Design Service -->
-            <div class="service">
-                <img src="icons/custom-design-icon.png" alt="Custom Designs Icon" style="width: 200px; height: 200px;">
-                <h3 style="font-family: 'Playfair Display', serif;">Custom Designs</h3>
-                <ul style="text-align: left; padding-left: 20px;">
-                    <li>Unique lighting displays crafted to match your event's theme or style.</li>
-                    <li>Collaborative design process to bring your vision to life, including color schemes and effects.</li>
-                    <li>Perfect for special occasions like weddings, parties, or community events.</li>
-                    <li>High-quality lights and installation techniques for a flawless, stunning display.</li>
-                </ul>
+            <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
+                <a href="#lighting-design">
+                    <img src="images/lighting-design.jpg" alt="Lighting Design" style="width: 100%; height: 300px; object-fit: cover;">
+                    <h3 style="font-family: 'Playfair Display', serif; text-align: left;">Types of Lighting Design and Their Benefits</h3>
+                </a>
+            </div>
+            <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
+                <a href="#cost-savings">
+                    <img src="images/cost-savings.jpg" alt="Cost Savings" style="width: 100%; height: 300px; object-fit: cover;">
+                    <h3 style="font-family: 'Playfair Display', serif; text-align: left;">How Professional Installation Saves You Money</h3>
+                </a>
             </div>
         </div>
+
+        <!-- Blog Content Sections -->
+        <section id="tips-tricks" style="background-color: #f9f9f9; padding: 20px;">
+            <h3 style="text-align: left;">Tips & Tricks for Christmas Light Installations</h3>
+            <p style="font-family: 'Playfair Display', serif;">Christmas light installations can be challenging, but with the right techniques, your home will look stunning. Start by planning your design and deciding on the types of lights you want to use—LED lights are energy-efficient and provide great brightness. Always test your lights before installation, and use proper outdoor extension cords for safety. Secure the lights using clips rather than staples to avoid damaging your property. Finally, be patient and take your time, ensuring everything is evenly spaced for a professional look.</p>
+        </section>
+
+        <section id="faq" style="background-color: #ffffff; padding: 20px;">
+            <h3 style="text-align: left;">FAQ: Everything You Need to Know</h3>
+            <p style="font-family: 'Playfair Display', serif;">
+                <!-- FAQ questions and answers -->
+                <strong>Q: How long does it take to install Christmas lights?</strong><br>
+                A: Installation times vary depending on the size of the property, but typically it takes between 2 to 4 hours for a standard home.
+                <br><br>
+                <strong>Q: Are the lights provided by Silicon Valley Lights?</strong><br>
+                A: Yes, we provide high-quality, commercial-grade lights that are energy-efficient and custom fit for your property.
+                <br><br>
+                <strong>Q: What if a light goes out during the holiday season?</strong><br>
+                A: We offer maintenance services throughout the holiday season. Just give us a call, and we'll fix any issues promptly to keep your display shining bright.
+                <br><br>
+                <strong>Q: Can I customize the lighting design?</strong><br>
+                A: Absolutely! We work closely with our clients to create custom lighting designs that match their preferences, whether it be classic white lights or a unique themed display.
+                <br><br>
+                <strong>Q: Are your installers insured?</strong><br>
+                A: Yes, our installers are fully insured, which means you are protected from any liability during the installation process.
+            </p>
+        </section>
+
+        <section id="lighting-design" style="background-color: #f9f9f9; padding: 20px;">
+            <h3 style="text-align: left;">Types of Lighting Design and Their Benefits</h3>
+            <p style="font-family: 'Playfair Display', serif;">There are several types of lighting designs to consider for your home or business. Classic white lights provide an elegant and timeless look, perfect for those who want a sophisticated holiday display. Colorful light displays are great for creating a fun, festive atmosphere, especially if you want to appeal to families or young children. Custom-themed installations, such as candy canes or snowflakes, can add a unique touch that makes your property stand out. Each design has its own charm, and choosing the right one depends on the style and mood you want to create.</p>
+        </section>
+
+        <section id="professional-benefits" style="background-color: #ffffff; padding: 20px;">
+            <h3 style="font-family: 'Playfair Display', serif; text-align: left;">Why Hire Professionals for Christmas Light Installations?</h3>
+            <p style="font-family: 'Playfair Display', serif;">Hiring professionals for your Christmas light installations has numerous benefits. Not only do you get a beautiful, custom-designed display tailored to your home or business, but you also save significant time and effort. Professional installers have the tools, expertise, and experience needed to safely and efficiently set up lights, ensuring everything is securely installed and evenly spaced for a flawless look.</p>
+            <p style="font-family: 'Playfair Display', serif;">Another major benefit is safety. Installing Christmas lights often requires climbing ladders, working on roofs, and dealing with electrical components. Professional installers are trained to handle these tasks safely, reducing the risk of accidents or injuries. Additionally, professionals use high-quality, commercial-grade materials that are designed to withstand winter weather conditions, providing reliability throughout the holiday season.</p>
+            <p style="font-family: 'Playfair Display', serif;">Insurance is another key factor when considering professional installation. Our professional installers are fully insured, which means you are protected from any liability in case of an accident during the installation process. This provides peace of mind, knowing that your property and everyone involved is always covered. In contrast, DIY installations come with potential risks that could lead to costly damages or injuries.</p>
+            <p style="font-family: 'Playfair Display', serif;">Lastly, using professionals can save you money in the long run. With energy-efficient LED lights, expert installation that prevents damage to your property, and ongoing maintenance support, you avoid many of the costs that can come with improper setup or lower-quality materials. Our maintenance services ensure that if any light goes out during the holiday season, it is promptly repaired or replaced, keeping your display looking perfect without additional hassle.</p>
+        </section>
     </section>
-
-    <!-- Service Area Section displaying a map of the coverage area -->
-    <section id="service-area" style="padding: 30px 20px; margin-bottom: 100px; clear: both; background-color: #fff;">
-        <h2 style="font-family: 'Playfair Display', serif;">Our Service Area</h2>
-        <div id="map" style="text-align: center; max-width: 1000px; margin: 40px auto;">
-            <img src="images/service-area-map.jpg" alt="Service Area Map - 70 Miles from the Hayward Bridge" style="width: 100%; max-width: 1100px; height: auto;">
-        </div>
-    </section>
-
-    <!-- Separator Section for visual separation of sections -->
-    <section class="separator" style="background-color: #f0f0f0; height: 60px; margin-bottom: 0;"></section>
-
-    <!-- Gallery Section showcasing past projects -->
-    <section id="gallery">
-        <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
-        <div class="gallery-container" style="margin-bottom: 40px;">
-            <!-- Clickable images with Lightbox for enlarged views -->
-            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
-            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
-            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
-            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4"></a>
-        </div>
-    </section>
-
-    <!-- Contact Section with a form to get a quote -->
-    <section id="contact">
-        <h2 style="font-family: 'Playfair Display', serif;">Get a Quote</h2>
-        <img src="icons/quote-icon.png" alt="Quote Icon" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
-        <form id="contact-form">
-            <!-- Name input field -->
-            <div class="form-group">
-                <label for="name" style="font-family: 'Playfair Display', serif;">Name</label>
-                <input type="text" id="name" name="Name" required>
-            </div>
-            <!-- Phone number input field -->
-            <div class="form-group">
-                <label for="phone" style="font-family: 'Playfair Display', serif;">Phone Number</label>
-                <input type="tel" id="phone" name="Phone" required>
-            </div>
-            <!-- Email input field -->
-            <div class="form-group">
-                <label for="email" style="font-family: 'Playfair Display', serif;">Email</label>
-                <input type="email" id="email" name="_replyto" required>
-            </div>
-            <!-- Message input field -->
-            <div class="form-group">
-                <label for="message" style="font-family: 'Playfair Display', serif;">Message</label>
-                <textarea id="message" name="Message" rows="5" required></textarea>
-            </div>
-            <!-- Submit button for the contact form -->
-            <button type="submit" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Submit</button>
-        </form>
-        <!-- Thank you message displayed after successful form submission -->
-        <div id="thank-you-message" style="display: none; font-family: 'Playfair Display', serif; text-align: center; margin-top: 20px;">Thank you for your message! We'll get back to you shortly.</div>
-        <script>
-            // JavaScript to handle the contact form submission via Fetch API
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
-                
-                const formData = new FormData(event.target);
-                
-                fetch('https://formspree.io/f/xyzgqyod', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        // Hide the contact form and show the thank-you message
-                        document.getElementById('contact-form').style.display = 'none';
-                        document.getElementById('thank-you-message').style.display = 'block';
-                    } else {
-                        alert('There was an issue submitting your form. Please try again.');
-                    }
-                }).catch(error => {
-                    alert('There was an error submitting your form. Please check your connection and try again.');
-                });
-            });
-        </script>
-    </section>
-
-    <!-- Footer Section with social media links -->
-    <footer>
-        <p>&copy; 2024 Silicon Valley Lights. All rights reserved.</p>
-        <div class="social-media">
-            <!-- Social media links with icons -->
-            <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
-            <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
-            <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt="Twitter"></a>
-        </div>
-    </footer>
-
-    <!-- Lightbox JavaScript for gallery functionality -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-    
-    <!-- Hidden SEO text for search engines to crawl -->
-    <div style="display: none;">
-        Silicon Valley Lights is your top choice for professional Christmas light installation services in Silicon Valley. We offer residential, commercial, and custom holiday lighting solutions designed to brighten up any property. Our experienced team handles every detail, from designing custom lighting to installing and maintaining it throughout the holiday season.
-
-        Looking for professional holiday lighting installers in Silicon Valley? Silicon Valley Lights provides comprehensive holiday light installation services for homes and businesses. Our skilled professionals ensure safe, secure, and beautiful holiday displays using energy-efficient LED lights.
-
-        Commercial Christmas light installation is one of our specialties. Let us help boost your business’s holiday spirit with creative, durable lighting that will make your storefront or office stand out. We work with commercial properties of all sizes to create an inviting holiday atmosphere that draws customers in and encourages holiday shopping.
-
-        Our residential Christmas light installation services provide homeowners with festive, custom-designed displays. Whether you want classic white lights, colorful patterns, or intricate designs, we will work with you to create a holiday look that reflects your style and taste. Our energy-efficient LED lights are bright, long-lasting, and save you money on energy bills.
-
-        At Silicon Valley Lights, we also provide custom holiday lighting solutions. No matter your theme or idea, we bring it to life with custom displays for residential, commercial, or special events. We pride ourselves on being a leading Christmas light installer in Silicon Valley with years of experience and numerous satisfied clients.
-
-        We understand that the holiday season can be hectic, so we make our holiday light installation process simple. From the initial consultation to the final installation, we handle every detail to make sure your holidays are stress-free and your lighting looks amazing. Safety is always our top priority, and we use professional-grade equipment to ensure a safe setup. Our team also provides timely maintenance and repair services throughout the holiday season, as well as professional removal after the holidays.
-
-        Christmas light installation in Silicon Valley is about more than just putting up lights—it’s about creating memories and experiences for your family, neighbors, or customers. At Silicon Valley Lights, we love the magic of the holidays and are dedicated to spreading that joy with professional lighting services.
-
-        Why choose Silicon Valley Lights? Our team is passionate about holiday decorating and bringing festive joy to the community. We offer competitive rates, flexible scheduling, and a commitment to exceptional quality. We use only top-quality materials that are safe for your property, and our lights are designed to withstand winter weather conditions.
-
-        Let us take care of your holiday lighting this year. If you are in Silicon Valley and need professional Christmas light installation, Silicon Valley Lights is here to help. With our expertise and eye for design, we guarantee to turn your vision into a beautiful reality that will be the envy of the neighborhood.
-
-        Services we provide include residential holiday lighting, commercial holiday lighting, custom lighting displays, LED lighting installations, roofline lighting, tree wrapping, landscape lighting, wreath hanging, and much more. Whatever your vision, we have the skills and creativity to make it happen.
-
-        Contact Silicon Valley Lights today to schedule your installation and bring the magic of Christmas to your home or business. We offer free consultations and will provide you with a custom quote for your project. Don't wait—our calendar fills up fast during the holiday season!
-    </div>
 </body>
 </html>
