@@ -12,55 +12,61 @@
 <body>
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 0;">
-    <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 60px; flex-wrap: wrap;">
-        <style>
-            @media (max-width: 768px) {
-                .header-container {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding: 0 15px;
+        <!-- Header container to organize logo and navigation links -->
+        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 0 60px; flex-wrap: wrap;">
+            <style>
+                /* Responsive styles for smaller screens */
+                @media (max-width: 768px) {
+                    .header-container {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0 15px;
+                    }
+                    .nav-button {
+                        padding: 8px 15px;
+                        margin-bottom: 5px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .logo img {
+                        width: 80px;
+                        height: 80px;
+                    }
                 }
-                .nav-button {
-                    padding: 8px 15px;
-                    margin-bottom: 5px;
-                    width: 100%;
-                    text-align: center;
-                }
-                .logo img {
-                    width: 80px;
-                    height: 80px;
-                }
-            }
-        </style>
-        <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 80px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
-            <h1 style="color: #ffffff; font-weight: bold; font-family: 'Playfair Display', serif;">Silicon Valley Lights</h1>
+            </style>
+            <!-- Logo section -->
+            <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+                <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo" style="width: 100px; height: 80px; vertical-align: middle; margin-top: auto; margin-bottom: auto;">
+                <h1 style="color: #ffffff; font-weight: bold; font-family: 'Playfair Display', serif;">Silicon Valley Lights</h1>
+            </div>
+            <!-- Navigation links -->
+            <nav>
+                <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
+                    <li><a href="index.html#services" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Services</a></li>
+                    <li><a href="index.html#gallery" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Our Work</a></li>
+                    <li><a href="index.html#contact" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
-                <li><a href="index.html#services" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Services</a></li>
-                <li><a href="index.html#gallery" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Our Work</a></li>
-                <li><a href="index.html#contact" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Contact Us</a></li>
-                <li><a href="blog.html" class="nav-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Blog</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <!-- Blog Section -->
     <section id="blog-content" style="text-align: left;">
         <h2 style="font-family: 'Playfair Display', serif;">Our Blog</h2>
+        <!-- Blog items container to hold individual blog entries -->
         <div class="blog-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <!-- Individual blog item -->
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
                 <a href="#tips-tricks" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     <img src="images/tips-tricks.jpg" alt="Tips and Tricks" style="width: 100%; height: 300px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <h3 style="text-align: left;; font-family: 'Playfair Display', serif;">Tips & Tricks for Christmas Light Installations</h3>
+                    <h3 style="text-align: left; font-family: 'Playfair Display', serif;">Tips & Tricks for Christmas Light Installations</h3>
                 </a>
             </div>
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
                 <a href="#faq">
                     <img src="images/faq.jpg" alt="FAQ" style="width: 100%; height: 300px; object-fit: cover;">
-                    <h3 style="font-family: 'Playfair Display', serif; text-align: left;"></h3>
+                    <h3 style="font-family: 'Playfair Display', serif; text-align: left;">FAQ: Everything You Need to Know</h3>
                 </a>
             </div>
             <div class="blog-item" style="width: 200px; margin: 20px; text-align: left;">
@@ -85,7 +91,23 @@
 
         <section id="faq" style="background-color: #ffffff; padding: 20px;">
             <h3 style="text-align: left;">FAQ: Everything You Need to Know</h3>
-            <p style="font-family: 'Playfair Display', serif;"></p>
+            <p style="font-family: 'Playfair Display', serif;">
+                <!-- FAQ questions and answers -->
+                <strong>Q: How long does it take to install Christmas lights?</strong><br>
+                A: Installation times vary depending on the size of the property, but typically it takes between 2 to 4 hours for a standard home.
+                <br><br>
+                <strong>Q: Are the lights provided by Silicon Valley Lights?</strong><br>
+                A: Yes, we provide high-quality, commercial-grade lights that are energy-efficient and custom fit for your property.
+                <br><br>
+                <strong>Q: What if a light goes out during the holiday season?</strong><br>
+                A: We offer maintenance services throughout the holiday season. Just give us a call, and we'll fix any issues promptly to keep your display shining bright.
+                <br><br>
+                <strong>Q: Can I customize the lighting design?</strong><br>
+                A: Absolutely! We work closely with our clients to create custom lighting designs that match their preferences, whether it be classic white lights or a unique themed display.
+                <br><br>
+                <strong>Q: Are your installers insured?</strong><br>
+                A: Yes, our installers are fully insured, which means you are protected from any liability during the installation process.
+            </p>
         </section>
 
         <section id="lighting-design" style="background-color: #f9f9f9; padding: 20px;">
@@ -100,3 +122,6 @@
             <p style="font-family: 'Playfair Display', serif;">Insurance is another key factor when considering professional installation. Our professional installers are fully insured, which means you are protected from any liability in case of an accident during the installation process. This provides peace of mind, knowing that your property and everyone involved is always covered. In contrast, DIY installations come with potential risks that could lead to costly damages or injuries.</p>
             <p style="font-family: 'Playfair Display', serif;">Lastly, using professionals can save you money in the long run. With energy-efficient LED lights, expert installation that prevents damage to your property, and ongoing maintenance support, you avoid many of the costs that can come with improper setup or lower-quality materials. Our maintenance services ensure that if any light goes out during the holiday season, it is promptly repaired or replaced, keeping your display looking perfect without additional hassle.</p>
         </section>
+    </section>
+</body>
+</html>
