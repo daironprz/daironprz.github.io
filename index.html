@@ -127,7 +127,7 @@
     <section id="contact">
         <h2 style="font-family: 'Playfair Display', serif;">Get a Quote</h2>
         <img src="icons/quote-icon.png" alt="Quote Icon" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
-        <form action="https://formspree.io/f/xyzgqyod" method="POST">
+        <form id="contact-form">
             <div class="form-group">
                 <label for="name" style="font-family: 'Playfair Display', serif;">Name</label>
                 <input type="text" id="name" name="Name" required>
@@ -146,6 +146,31 @@
             </div>
             <button type="submit" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);; font-family: 'Playfair Display', serif;">Submit</button>
         </form>
+<div id="thank-you-message" style="display: none; font-family: 'Playfair Display', serif; text-align: center; margin-top: 20px;">Thank you for your message! We'll get back to you shortly.</div>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        const formData = new FormData(event.target);
+        
+        fetch('https://formspree.io/f/xyzgqyod', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+            } else {
+                alert('There was an issue submitting your form. Please try again.');
+            }
+        }).catch(error => {
+            alert('There was an error submitting your form. Please check your connection and try again.');
+        });
+    });
+</script>
     </section>
 
     <!-- Footer Section -->
