@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicon for the browser tab -->
     <link rel="icon" href="images/logo-icon.png" type="image/png">
     <title>Silicon Valley Lights</title>
-    <!-- Link to the external CSS file for the main styles -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- Lightbox CSS for gallery functionality -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <meta name="description" content="Professional Christmas Light Installation in Silicon Valley - Residential, Commercial, and Custom Holiday Lighting Solutions. Expert holiday lighting services in San Jose, San Francisco, and surrounding areas.">
     <meta name="keywords" content="Christmas light installation, holiday lighting services, residential holiday lights, commercial Christmas lights, custom holiday lighting, Silicon Valley, San Jose, San Francisco, LED holiday lights, professional light installation, holiday decoration, roofline lighting, tree wrapping, festive lights, Christmas light hanging, exterior holiday decor, energy-efficient holiday lights">
 </head>
 <body>
-    <!-- Header Section -->
     <header class="header">
         <div class="header-container">
-            <!-- Logo and title for the website -->
             <div class="logo">
                 <a href="index.html">
                     <img src="images/logo-icon.png" alt="Silicon Valley Lights Logo">
                 </a>
                 <h1><a href="index.html">Silicon Valley Lights</a></h1>
             </div>
-            <!-- Navigation menu for different sections of the website -->
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-button">Home</a></li>
@@ -39,7 +32,6 @@
         </div>
     </header>
 
-    <!-- Hero Section with a call to action for users -->
     <section class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="videos/hero-video.mp4" type="video/mp4">
@@ -52,18 +44,15 @@
         </div>
     </section>
 
-    <!-- Promotional Section for early bird discounts -->
     <section id="promotion" class="promotion">
         <h2>Early Bird Special</h2>
         <p>Save <strong>20%</strong> on installations by leaving a deposit and booking early!</p>
         <a href="#contact" class="promo-button">Get Your Discount</a>
     </section>
 
-    <!-- Services Section describing different types of services offered -->
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="services-container">
-            <!-- Residential Installation Service -->
             <div class="service">
                 <img src="icons/residential-icon.png" alt="Residential Icon">
                 <h3>Residential Installation</h3>
@@ -74,7 +63,6 @@
                     <li>Safe and secure setup, including careful handling of roofs, gutters, and landscaping.</li>
                 </ul>
             </div>
-            <!-- Commercial Installation Service -->
             <div class="service">
                 <img src="icons/commercial-icon.png" alt="Commercial Icon">
                 <h3>Commercial Installation</h3>
@@ -85,7 +73,6 @@
                     <li>Weather-resistant and durable lighting to withstand high-traffic environments.</li>
                 </ul>
             </div>
-            <!-- Custom Lighting Design Service -->
             <div class="service">
                 <img src="icons/custom-design-icon.png" alt="Custom Designs Icon">
                 <h3>Custom Designs</h3>
@@ -99,11 +86,9 @@
         </div>
     </section>
 
-    <!-- Gallery Section showcasing past projects -->
     <section id="gallery" class="gallery">
         <h2>Our Work</h2>
         <div class="gallery-container">
-            <!-- Clickable images with Lightbox for enlarged views -->
             <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
             <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
             <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
@@ -111,63 +96,49 @@
         </div>
     </section>
 
-    <!-- Contact Section with a form to get a quote -->
     <section id="contact" class="contact">
         <h2>Get a Quote</h2>
         <img src="icons/quote-icon.png" alt="Quote Icon" class="quote-icon">
         <form id="contact-form">
-            <!-- Name input field -->
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="Name" required>
             </div>
-            <!-- Phone number input field -->
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="Phone" required>
             </div>
-            <!-- Email input field -->
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="_replyto" required>
             </div>
-            <!-- Message input field -->
             <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="Message" rows="5" required></textarea>
             </div>
-            <!-- Submit button for the contact form -->
             <button type="submit" class="submit-button">Submit</button>
         </form>
-        <!-- Thank you message displayed after successful form submission -->
         <div id="thank-you-message" class="thank-you-message">Thank you for your message! We'll get back to you shortly.</div>
         <script src="scripts/form-handler.js"></script>
     </section>
 
-    <!-- Footer Section with social media links -->
     <footer class="footer">
         <p>&copy; 2024 Silicon Valley Lights. All rights reserved.</p>
         <div class="social-media">
-            <!-- Social media links with icons -->
             <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
             <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
             <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt="Twitter"></a>
         </div>
     </footer>
 
-    <!-- Contact Us Section -->
     <section id="contact-us" class="contact-us">
         <h3>Contact Us</h3>
         <p>Email: <a href="mailto:siliconvalleylights@gmail.com">siliconvalleylights@gmail.com</a></p>
     </section>
 
-    <!-- Lightbox JavaScript for gallery functionality -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
-
-    <!-- Custom JavaScript for responsive hero and other adjustments -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Adjust hero section for better mobile experience
             const heroSection = document.querySelector('.hero');
             const heroContent = document.querySelector('.hero-content');
             const heroVideo = document.querySelector('.hero-video');
@@ -190,3 +161,4 @@
     </script>
 </body>
 </html>
+
