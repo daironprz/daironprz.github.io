@@ -43,7 +43,7 @@
 <body style="overflow-x: hidden; margin: 0;">
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 0; margin: 0;">
-        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 100%; margin: 0 auto; padding: 10px 40px; flex-wrap: wrap; height: calc(100% + 10px);">
+        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin: 0 auto; padding: 10px 40px; flex-wrap: wrap; height: calc(100% + 10px); overflow-x: hidden;">
             <!-- Media query for responsive header adjustments -->
             <style>
                 @media (max-width: 768px) {
@@ -85,8 +85,8 @@
     </header>
 
     <!-- Hero Section with a call to action for users -->
-    <section class="hero" style="position: relative; width: 100%; height: 70vh; overflow: hidden;">
-        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; margin: 0;">
+    <section class="hero" style="position: relative; width: 100vw; height: 70vh; overflow: hidden;">
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100vw; height: 100%; object-fit: cover; margin: 0;">
             <source src="videos/hero-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -158,12 +158,15 @@
     <!-- Gallery Section showcasing past projects -->
     <section id="gallery">
         <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
-        <div class="gallery-container" style="margin-bottom: 40px;">
+        <div class="gallery-container" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
+            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
+            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
+            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4"></a>
             <a href="images/photo5.jpg" data-lightbox="gallery" data-title="Project 5"><img src="images/photo5.jpg" alt="Project 5"></a>
             <a href="images/photo6.jpg" data-lightbox="gallery" data-title="Project 6"><img src="images/photo6.jpg" alt="Project 6"></a>
             <a href="images/photo7.jpg" data-lightbox="gallery" data-title="Project 7"><img src="images/photo7.jpg" alt="Project 7"></a>
             <a href="images/photo8.jpg" data-lightbox="gallery" data-title="Project 8"><img src="images/photo8.jpg" alt="Project 8"></a>
-            <a href="images/photo9.jpg" data-lightbox="gallery" data-title="Project 9"><img src="images/photo9.jpg" alt="Project 9"></a>
         </div>
     </section>
 
