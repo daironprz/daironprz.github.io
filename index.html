@@ -39,52 +39,8 @@
     return false;
   }
 </script>
-<style>
-    body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    .hero {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-    .hero video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
-    }
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        border-radius: 15px;
-    }
-    .gallery-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        justify-items: center;
-    }
-    .gallery-container a img {
-        border-radius: 15px;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-</style>
 </head>
-<body>
+<body style="overflow-x: hidden; margin: 0; padding: 0;">
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 0; margin: 0; overflow: hidden; width: 100%;">
         <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 40px; flex-wrap: wrap;">
@@ -129,36 +85,172 @@
     </header>
 
     <!-- Hero Section with a call to action for users -->
-    <section class="hero">
-        <video autoplay muted loop playsinline>
+    <section class="hero" style="position: relative; width: 100%; height: 60vh; overflow: hidden;">
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; max-width: 100%;">
             <source src="videos/hero-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="hero-content">
+        <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
             <h2 style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: 'Playfair Display', serif;">🎄Brighten Up Your Holidays with Silicon Valley Lights🎄</h2>
             <p style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: 'Playfair Display', serif;">Professional Christmas Light Installation in the Heart of Silicon Valley</p>
             <a href="#contact" class="cta-button" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 30px 60px; font-size: 1.5em; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Book Now</a>
         </div>
     </section>
 
-    <!-- Gallery Section showcasing past projects -->
-    <section id="gallery">
-        <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
-        <div class="gallery-container">
-            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
-            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
-            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
-            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4"></a>
-            <a href="images/photo5.jpg" data-lightbox="gallery" data-title="Project 5"><img src="images/photo5.jpg" alt="Project 5"></a>
-            <a href="images/photo6.jpg" data-lightbox="gallery" data-title="Project 6"><img src="images/photo6.jpg" alt="Project 6"></a>
-            <a href="images/photo7.jpg" data-lightbox="gallery" data-title="Project 7"><img src="images/photo7.jpg" alt="Project 7"></a>
-            <a href="images/photo8.jpg" data-lightbox="gallery" data-title="Project 8"><img src="images/photo8.jpg" alt="Project 8"></a>
+    <!-- Promotional Section for early bird discounts -->
+    <section id="promotion" style="margin-top: 0;">
+        <h2 style="font-family: 'Playfair Display', serif;">Early Bird Special</h2>
+        <p style="font-family: 'Playfair Display', serif;">Save <strong>20%</strong> on installations by leaving a deposit and booking early!</p>
+        <a href="#contact" class="promo-button" style="background-color: #d4af37; color: #004643; border-radius: 25px; padding: 30px 60px; font-size: 1.5em; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Get Your Discount</a>
+    </section>
+
+    <!-- Services Section describing different types of services offered -->
+    <section id="services">
+        <h2 style="font-family: 'Playfair Display', serif;">Our Services</h2>
+        <div class="services-container">
+            <!-- Residential Installation Service -->
+            <div class="service">
+                <img src="icons/residential-icon.png" alt="Residential Icon" style="width: 200px; height: 200px;">
+                <h3 style="font-family: 'Playfair Display', serif;">Residential Installation</h3>
+                <ul style="text-align: left; padding-left: 20px;">
+                    <li>Custom holiday lighting design tailored to your home's architecture.</li>
+                    <li>Energy-efficient LED lights for a vibrant and cost-effective display.</li>
+                    <li>Professional installation, maintenance, and removal services.</li>
+                    <li>Safe and secure setup, including careful handling of roofs, gutters, and landscaping.</li>
+                </ul>
+            </div>
+            <!-- Commercial Installation Service -->
+            <div class="service">
+                <img src="icons/commercial-icon.png" alt="Commercial Icon" style="width: 200px; height: 200px;">
+                <h3 style="font-family: 'Playfair Display', serif;">Commercial Installation</h3>
+                <ul style="text-align: left; padding-left: 20px;">
+                    <li>Eye-catching lighting solutions that enhance your business's holiday spirit.</li>
+                    <li>LED installations designed to attract more foot traffic and boost customer engagement.</li>
+                    <li>Professional installation and prompt service to minimize disruption to your business.</li>
+                    <li>Weather-resistant and durable lighting to withstand high-traffic environments.</li>
+                </ul>
+            </div>
+            <!-- Custom Lighting Design Service -->
+            <div class="service">
+                <img src="icons/custom-design-icon.png" alt="Custom Designs Icon" style="width: 200px; height: 200px;">
+                <h3 style="font-family: 'Playfair Display', serif;">Custom Designs</h3>
+                <ul style="text-align: left; padding-left: 20px;">
+                    <li>Unique lighting displays crafted to match your event's theme or style.</li>
+                    <li>Collaborative design process to bring your vision to life, including color schemes and effects.</li>
+                    <li>Perfect for special occasions like weddings, parties, or community events.</li>
+                    <li>High-quality lights and installation techniques for a flawless, stunning display.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <!-- Service Area Section displaying a map of the coverage area -->
+    <section id="service-area" style="padding: 30px 20px; margin-bottom: 100px; clear: both; background-color: #fff;">
+        <h2 style="font-family: 'Playfair Display', serif;">Our Service Area</h2>
+        <div id="map" style="text-align: center; max-width: 1000px; margin: 40px auto;">
+            <img src="images/service-area-map.jpg" alt="Service Area Map - 70 Miles from the Hayward Bridge" style="width: 100%; max-width: 1100px; height: auto;">
+        </div>
+    </section>
+
+    <!-- Separator Section for visual separation of sections -->
+    <section class="separator" style="background-color: #f0f0f0; height: 60px; margin-bottom: 0;"></section>
+
+    <!-- Gallery Section showcasing past projects -->
+    <section id="gallery">
+        <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
+        <div class="gallery-container" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-items: center;">
+            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo5.jpg" data-lightbox="gallery" data-title="Project 5"><img src="images/photo5.jpg" alt="Project 5" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo6.jpg" data-lightbox="gallery" data-title="Project 6"><img src="images/photo6.jpg" alt="Project 6" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo7.jpg" data-lightbox="gallery" data-title="Project 7"><img src="images/photo7.jpg" alt="Project 7" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+            <a href="images/photo8.jpg" data-lightbox="gallery" data-title="Project 8"><img src="images/photo8.jpg" alt="Project 8" style="border-radius: 15px; max-width: 100%; height: auto;"></a>
+        </div>
+    </section>
+
+    <!-- Contact Section with a form to get a quote -->
+    <section id="contact">
+        <h2 style="font-family: 'Playfair Display', serif;">Get a Quote</h2>
+        <img src="icons/quote-icon.png" alt="Quote Icon" style="width: 200px; height: 200px; display: block; margin: 0 auto;">
+        <form id="contact-form">
+            <!-- Name input field -->
+            <div class="form-group">
+                <label for="name" style="font-family: 'Playfair Display', serif;">Name</label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+            <!-- Phone number input field -->
+            <div class="form-group">
+                <label for="phone" style="font-family: 'Playfair Display', serif;">Phone Number</label>
+                <input type="tel" id="phone" name="Phone" required>
+            </div>
+            <!-- Email input field -->
+            <div class="form-group">
+                <label for="email" style="font-family: 'Playfair Display', serif;">Email</label>
+                <input type="email" id="email" name="_replyto" required>
+            </div>
+            <!-- Message input field -->
+            <div class="form-group">
+                <label for="message" style="font-family: 'Playfair Display', serif;">Message</label>
+                <textarea id="message" name="Message" rows="5" required></textarea>
+            </div>
+            <!-- Submit button for the contact form -->
+            <button type="submit" style="background-color: #ffffff; color: #004643; border-radius: 25px; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Submit</button>
+        </form>
+        <!-- Thank you message displayed after successful form submission -->
+        <div id="thank-you-message" style="display: none; font-family: 'Playfair Display', serif; text-align: center; margin-top: 20px;">Thank you for your message! We'll get back to you shortly.</div>
+        <script>
+            // JavaScript to handle the contact form submission via Fetch API
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                
+                const formData = new FormData(event.target);
+                
+                fetch('https://formspree.io/f/xyzgqyod', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        // Hide the contact form and show the thank-you message
+                        document.getElementById('contact-form').style.display = 'none';
+                        document.getElementById('thank-you-message').style.display = 'block';
+                    } else {
+                        alert('There was an issue submitting your form. Please try again.');
+                    }
+                }).catch(error => {
+                    alert('There was an error submitting your form. Please check your connection and try again.');
+                });
+            });
+        </script>
+    </section>
+
+    <!-- Footer Section with social media links -->
+    <footer>
+        <p>&copy; 2024 Silicon Valley Lights. All rights reserved.</p>
+        <div class="social-media">
+            <!-- Social media links with icons -->
+            <a href="#" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="Twitter"><img src="icons/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" style="background-color: #f0f0f0; padding: 20px; text-align: center;">
+        <h3 style="font-family: 'Playfair Display', serif;">Contact Us</h3>
+        <p style="font-family: 'Playfair Display', serif;">Email: <a href="mailto:siliconvalleylights@gmail.com">siliconvalleylights@gmail.com</a></p>
+    </section>
+
+    <!-- Lightbox JavaScript for gallery functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    
     <!-- Hidden SEO text for search engines to crawl -->
     <div style="display: none;">
-         Looking for professional Christmas light installation in the following cities: Alameda, Albany, American Canyon, Antioch, Atherton, Belmont, Benicia, Berkeley, Brentwood, Brisbane, Burlingame, Calistoga, Campbell, Clayton, Cloverdale, Colma, Concord, Corte Madera, Cotati, Cupertino, Daly City, Danville, Dixon, Dublin, East Palo Alto, El Cerrito, Emeryville, Fairfax, Fairfield, Foster City, Fremont, Gilroy, Half Moon Bay, Hayward, Healdsburg, Hercules, Hillsborough, Lafayette, Larkspur, Livermore, Los Altos, Los Altos Hills, Los Gatos, Martinez, Menlo Park, Mill Valley, Millbrae, Milpitas, Monte Sereno, Moraga, Morgan Hill, Mountain View, Napa, Newark, Novato, Oakland, Oakley, Orinda, Pacifica, Palo Alto, Petaluma, Piedmont, Pinole, Pittsburg, Pleasant Hill, Pleasanton, Portola Valley, Redwood City, Richmond, Rio Vista, Rohnert Park, Ross, San Anselmo, San Bruno, San Carlos, San Francisco, San Jose, San Leandro, San Mateo, San Pablo, San Rafael, San Ramon, Santa Clara, Santa Rosa, Saratoga, Sausalito, Sebastopol, Sonoma, South San Francisco, St. Helena, Suisun City, Sunnyvale, Tiburon, Union City, Vacaville, Vallejo, Walnut Creek, Windsor, Woodside, Yountville.
+        Looking for professional Christmas light installation in the following cities: Alameda, Albany, American Canyon, Antioch, Atherton, Belmont, Benicia, Berkeley, Brentwood, Brisbane, Burlingame, Calistoga, Campbell, Clayton, Cloverdale, Colma, Concord, Corte Madera, Cotati, Cupertino, Daly City, Danville, Dixon, Dublin, East Palo Alto, El Cerrito, Emeryville, Fairfax, Fairfield, Foster City, Fremont, Gilroy, Half Moon Bay, Hayward, Healdsburg, Hercules, Hillsborough, Lafayette, Larkspur, Livermore, Los Altos, Los Altos Hills, Los Gatos, Martinez, Menlo Park, Mill Valley, Millbrae, Milpitas, Monte Sereno, Moraga, Morgan Hill, Mountain View, Napa, Newark, Novato, Oakland, Oakley, Orinda, Pacifica, Palo Alto, Petaluma, Piedmont, Pinole, Pittsburg, Pleasant Hill, Pleasanton, Portola Valley, Redwood City, Richmond, Rio Vista, Rohnert Park, Ross, San Anselmo, San Bruno, San Carlos, San Francisco, San Jose, San Leandro, San Mateo, San Pablo, San Rafael, San Ramon, Santa Clara, Santa Rosa, Saratoga, Sausalito, Sebastopol, Sonoma, South San Francisco, St. Helena, Suisun City, Sunnyvale, Tiburon, Union City, Vacaville, Vallejo, Walnut Creek, Windsor, Woodside, Yountville.
         
         We offer services for: Residential Christmas Light Installation, Commercial Christmas Light Installation, Custom Holiday Lighting Design, LED Christmas Light Installation, Tree Wrapping Lighting, Roofline Lighting, Landscape Holiday Lighting, and Wreath Hanging Services.
         
@@ -192,4 +284,7 @@
         Services we provide include residential holiday lighting, commercial holiday lighting, custom lighting displays, LED lighting installations, roofline lighting, tree wrapping, landscape lighting, wreath hanging, and much more. Whatever your vision, we have the skills and creativity to make it happen.
 
         Contact Silicon Valley Lights today to schedule your installation and bring the magic of Christmas to your home or business. We offer free consultations and will provide you with a custom quote for your project. Don't wait—our calendar fills up fast during the holiday season!
+    </div>
+</body>
 </html>
+
