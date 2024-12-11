@@ -37,38 +37,6 @@
         box-sizing: border-box;
       }
 
-      /* Mobile Styles */
-      @media (max-width: 768px) {
-        .header-container {
-          flex-direction: column;
-          align-items: center; 
-          padding: 0 15px;
-        }
-
-        .logo {
-          margin-bottom: 20px;
-        }
-
-        nav ul {
-          flex-direction: column;
-          gap: 10px;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-        }
-
-        .nav-button {
-          width: 100%;
-          text-align: center;
-        }
-
-        /* On mobile, allow wrapping the services so they stack nicely */
-        .services-container {
-          flex-wrap: wrap !important;
-        }
-      }
-
-      /* Desktop and general styles */
       body {
         margin: 0; 
         padding: 0;
@@ -110,35 +78,82 @@
         text-decoration: none;
       }
 
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        padding: 10px 0;
-        margin: 0;
-        align-items: center;
-        justify-content: flex-end; 
-        flex-wrap: wrap;
-      }
-
-      .nav-button {
+      /* Menu button styling in header */
+      .menu-button {
         background-color: #ffffff;
         color: #004643;
         border-radius: 25px;
         padding: 10px 20px;
         border: none;
         cursor: pointer;
-        text-align: center;
         font-weight: bold;
         text-transform: uppercase;
         transition: all 0.3s ease;
+        font-family: 'Playfair Display', serif;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Side Menu (off-canvas navigation) */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: 100%;
+        background-color: #ffffff;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        z-index: 9999;
         font-family: 'Playfair Display', serif;
       }
 
-      .nav-button:hover {
+      .side-menu.open {
+        right: 0; /* Slide in */
+      }
+
+      .side-menu .close-btn {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .side-menu ul li a {
+        text-decoration: none;
+        color: #004643;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1em;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #f5f5f5;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .side-menu ul li a:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
       }
 
       .gallery-container img {
@@ -147,6 +162,15 @@
         height: 200px;
         object-fit: cover;
         border-radius: 15px;
+      }
+
+      /* Hero, Promotion, and other styles as before */
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: row;
+          align-items: center;
+        }
       }
     </style>
 </head>
@@ -160,17 +184,31 @@
                 </a>
                 <h1><a href="index.html">Silicon Valley Lights</a></h1>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="nav-button">Home</a></li>
-                    <li><a href="index.html#services" class="nav-button">Services</a></li>
-                    <li><a href="index.html#gallery" class="nav-button">Our Work</a></li>
-                    <li><a href="index.html#contact" class="nav-button">Contact Us</a></li>
-                    <li><a href="blog.html" class="nav-button">Blog</a></li>
-                </ul>
-            </nav>
+            <!-- Single Menu Button -->
+            <button class="menu-button" onclick="openMenu()">Menu</button>
         </div>
     </header>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="sideMenu">
+      <button class="close-btn" onclick="closeMenu()">×</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#gallery">Our Work</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <script>
+      function openMenu() {
+        document.getElementById("sideMenu").classList.add("open");
+      }
+      function closeMenu() {
+        document.getElementById("sideMenu").classList.remove("open");
+      }
+    </script>
 
     <!-- Hero Section -->
     <section class="hero" style="position: relative; width: 100%; height: 70vh; overflow: hidden;">
@@ -185,7 +223,7 @@
         </div>
     </section>
 
-    <!-- Last Call Section (Previously Early Bird) -->
+    <!-- Last Call Section -->
     <section id="promotion" style="margin-top: 0;">
         <h2 style="font-family: 'Playfair Display', serif;">Last Call</h2>
         <p style="font-family: 'Playfair Display', serif;">Our schedule is almost fully booked! Secure your spot now!</p>
@@ -195,7 +233,7 @@
     <!-- Services Section -->
     <section id="services">
         <h2 style="font-family: 'Playfair Display', serif;">Our Services</h2>
-        <!-- Ensuring they stay in one row on desktop by using nowrap -->
+        <!-- Keeping them side-by-side on desktop by removing wrap -->
         <div class="services-container" style="display: flex; flex-wrap: nowrap; gap: 40px; justify-content: center; padding: 20px;">
             <!-- Residential Installation Service -->
             <div class="service" style="max-width: 300px; text-align: center;">
