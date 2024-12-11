@@ -39,6 +39,21 @@
     return false;
   }
 </script>
+
+<style>
+  /* Ensure all elements box-size properly */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    /* Make the gallery more comfortable on mobile by reducing columns */
+    .gallery-container {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
+
 </head>
 <body style="overflow-x: hidden; margin: 0; padding: 0;">
     <!-- Header Section -->
@@ -86,7 +101,7 @@
 
     <!-- Hero Section with a call to action for users -->
     <section class="hero" style="position: relative; width: 100%; height: 60vh; overflow: hidden;">
-        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; max-width: 100%;">
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
             <source src="videos/hero-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -148,7 +163,7 @@
     <section id="service-area" style="padding: 30px 20px; margin-bottom: 100px; clear: both; background-color: #fff;">
         <h2 style="font-family: 'Playfair Display', serif;">Our Service Area</h2>
         <div id="map" style="text-align: center; max-width: 1000px; margin: 40px auto;">
-            <img src="images/service-area-map.jpg" alt="Service Area Map - 70 Miles from the Hayward Bridge" style="width: 100%; max-width: 1100px; height: auto;">
+            <img src="images/service-area-map.jpg" alt="Service Area Map - 70 Miles from the Hayward Bridge" style="width: 100%; height: auto;">
         </div>
     </section>
 
@@ -159,14 +174,16 @@
     <section id="gallery">
         <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
         <div class="gallery-container" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-items: center;">
-            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo5.jpg" data-lightbox="gallery" data-title="Project 5"><img src="images/photo5.jpg" alt="Project 5" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo6.jpg" data-lightbox="gallery" data-title="Project 6"><img src="images/photo6.jpg" alt="Project 6" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo7.jpg" data-lightbox="gallery" data-title="Project 7"><img src="images/photo7.jpg" alt="Project 7" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
-            <a href="images/photo8.jpg" data-lightbox="gallery" data-title="Project 8"><img src="images/photo8.jpg" alt="Project 8" style="border-radius: 15px; width: 300px; height: 300px; object-fit: cover;"></a>
+            <!-- Removed fixed width/height and let images scale responsively -->
+            <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo4.jpg" data-lightbox="gallery" data-title="Project 4"><img src="images/photo4.jpg" alt="Project 4" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo5.jpg" data-lightbox="gallery" data-title="Project 5"><img src="images/photo5.jpg" alt="Project 5" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo6.jpg" data-lightbox="gallery" data-title="Project 6"><img src="images/photo6.jpg" alt="Project 6" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo7.jpg" data-lightbox="gallery" data-title="Project 7"><img src="images/photo7.jpg" alt="Project 7" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+            <a href="images/photo8.jpg" data-lightbox="gallery" data-title="Project 8"><img src="images/photo8.jpg" alt="Project 8" style="border-radius: 15px; width: 100%; height: auto; object-fit: cover;"></a>
+        </div>
     </section>
 
     <!-- Contact Section with a form to get a quote -->
@@ -286,4 +303,3 @@
     </div>
 </body>
 </html>
-
