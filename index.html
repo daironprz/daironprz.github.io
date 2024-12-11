@@ -47,17 +47,29 @@
   }
 
   @media (max-width: 768px) {
-    /* Make the gallery more comfortable on mobile by reducing columns */
-    .gallery-container {
-      grid-template-columns: repeat(2, 1fr) !important;
+    /* On mobile, stack elements and add more space below the logo */
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+    .logo {
+      margin-bottom: 20px; /* Extra space between logo/name and buttons on mobile */
+    }
+    .nav-button {
+      padding: 8px 15px;
+      margin-bottom: 5px;
+      width: 100%;
+      text-align: center;
     }
   }
 
   /* Uniform gallery image styling */
   .gallery-container img {
+    display: block;
     width: 100%;
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures the image fills the area nicely */
+    height: 200px;
+    object-fit: cover;
     border-radius: 15px;
   }
 </style>
@@ -66,27 +78,7 @@
 <body style="overflow-x: hidden; margin: 0; padding: 0;">
     <!-- Header Section -->
     <header style="background-color: #004643; padding: 0; margin: 0; overflow: hidden; width: 100%;">
-        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 40px; flex-wrap: wrap;">
-            <!-- Media query for responsive header adjustments -->
-            <style>
-                @media (max-width: 768px) {
-                    .header-container {
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding: 0 15px;
-                    }
-                    .nav-button {
-                        padding: 8px 15px;
-                        margin-bottom: 5px;
-                        width: 100%;
-                        text-align: center;
-                    }
-                    .logo img {
-                        width: 80px;
-                        height: 80px;
-                    }
-                }
-            </style>
+        <div class="header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 40px;">
             <!-- Logo and title for the website -->
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
                 <a href="index.html">
@@ -181,7 +173,7 @@
     <!-- Gallery Section showcasing past projects -->
     <section id="gallery">
         <h2 style="font-family: 'Playfair Display', serif;">Our Work</h2>
-        <div class="gallery-container" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-items: center;">
+        <div class="gallery-container" style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
             <a href="images/photo1.jpg" data-lightbox="gallery" data-title="Project 1"><img src="images/photo1.jpg" alt="Project 1"></a>
             <a href="images/photo2.jpg" data-lightbox="gallery" data-title="Project 2"><img src="images/photo2.jpg" alt="Project 2"></a>
             <a href="images/photo3.jpg" data-lightbox="gallery" data-title="Project 3"><img src="images/photo3.jpg" alt="Project 3"></a>
