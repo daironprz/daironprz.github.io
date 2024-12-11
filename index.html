@@ -41,26 +41,40 @@
       @media (max-width: 768px) {
         .header-container {
           flex-direction: column;
-          align-items: center; /* Center items on mobile */
+          align-items: center; 
           padding: 0 15px;
         }
+
         .logo {
           margin-bottom: 20px;
         }
+
         nav ul {
-          flex-direction: column; /* Stack buttons vertically */
-          white-space: normal; /* Allow wrapping */
+          flex-direction: column;
+          gap: 10px;
           justify-content: center;
+          align-items: center;
+          width: 100%;
         }
+
         .nav-button {
-          padding: 8px 15px;
-          margin-bottom: 5px;
           width: 100%;
           text-align: center;
         }
+
+        /* On mobile, allow wrapping the services so they stack nicely */
+        .services-container {
+          flex-wrap: wrap !important;
+        }
       }
 
-      /* Adjustments for PC (Desktop) */
+      /* Desktop and general styles */
+      body {
+        margin: 0; 
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+      }
+
       .header-container {
         display: flex;
         justify-content: space-between;
@@ -69,14 +83,13 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 10px 40px;
-        flex-wrap: nowrap; /* No wrapping on desktop */
       }
 
       .logo {
         display: flex;
         align-items: center;
         gap: 15px;
-        white-space: nowrap; /* Prevent "Silicon Valley Lights" from wrapping */
+        white-space: nowrap;
       }
 
       .logo a img {
@@ -104,7 +117,8 @@
         padding: 10px 0;
         margin: 0;
         align-items: center;
-        white-space: nowrap; /* Keep all buttons in one line on desktop */
+        justify-content: flex-end; 
+        flex-wrap: wrap;
       }
 
       .nav-button {
@@ -120,7 +134,6 @@
         transition: all 0.3s ease;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         font-family: 'Playfair Display', serif;
-        white-space: nowrap; /* Prevent button text from breaking lines */
       }
 
       .nav-button:hover {
@@ -128,7 +141,6 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
       }
 
-      /* Gallery uniform images */
       .gallery-container img {
         display: block;
         width: 100%;
@@ -138,9 +150,9 @@
       }
     </style>
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
     <!-- Header Section -->
-    <header style="background-color: #004643; padding: 0; margin: 0; overflow: hidden; width: 100%;">
+    <header style="background-color: #004643; padding: 0; margin: 0; width: 100%;">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
@@ -160,7 +172,7 @@
         </div>
     </header>
 
-    <!-- Hero Section with a call to action for users -->
+    <!-- Hero Section -->
     <section class="hero" style="position: relative; width: 100%; height: 70vh; overflow: hidden;">
         <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
             <source src="videos/hero-video.mp4" type="video/mp4">
@@ -173,18 +185,18 @@
         </div>
     </section>
 
-    <!-- Promotional Section for early bird discounts -->
+    <!-- Last Call Section (Previously Early Bird) -->
     <section id="promotion" style="margin-top: 0;">
         <h2 style="font-family: 'Playfair Display', serif;">Last Call</h2>
-        <p style="font-family: 'Playfair Display', serif;">Our schedue is almost fully booked! Secure your spot now!</p>
+        <p style="font-family: 'Playfair Display', serif;">Our schedule is almost fully booked! Secure your spot now!</p>
         <a href="#contact" class="promo-button" style="background-color: #d4af37; color: #004643; border-radius: 25px; padding: 30px 60px; font-size: 1.5em; border: none; cursor: pointer; text-align: center; font-weight: bold; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Playfair Display', serif;">Contact Us</a>
     </section>
-
 
     <!-- Services Section -->
     <section id="services">
         <h2 style="font-family: 'Playfair Display', serif;">Our Services</h2>
-        <div class="services-container" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; padding: 20px;">
+        <!-- Ensuring they stay in one row on desktop by using nowrap -->
+        <div class="services-container" style="display: flex; flex-wrap: nowrap; gap: 40px; justify-content: center; padding: 20px;">
             <!-- Residential Installation Service -->
             <div class="service" style="max-width: 300px; text-align: center;">
                 <img src="icons/residential-icon.png" alt="Residential Icon" style="width: 200px; height: 200px;">
@@ -313,7 +325,7 @@
     <div style="display: none;">
         <!-- Hidden SEO text remains unchanged -->
         Looking for professional Christmas light installation in the following cities: Alameda, Albany, American Canyon, Antioch, Atherton, Belmont, Benicia, Berkeley, Brentwood, Brisbane, Burlingame, Calistoga, Campbell, Clayton, Cloverdale, Colma, Concord, Corte Madera, Cotati, Cupertino, Daly City, Danville, Dixon, Dublin, East Palo Alto, El Cerrito, Emeryville, Fairfax, Fairfield, Foster City, Fremont, Gilroy, Half Moon Bay, Hayward, Healdsburg, Hercules, Hillsborough, Lafayette, Larkspur, Livermore, Los Altos, Los Altos Hills, Los Gatos, Martinez, Menlo Park, Mill Valley, Millbrae, Milpitas, Monte Sereno, Moraga, Morgan Hill, Mountain View, Napa, Newark, Novato, Oakland, Oakley, Orinda, Pacifica, Palo Alto, Petaluma, Piedmont, Pinole, Pittsburg, Pleasant Hill, Pleasanton, Portola Valley, Redwood City, Richmond, Rio Vista, Rohnert Park, Ross, San Anselmo, San Bruno, San Carlos, San Francisco, San Jose, San Leandro, San Mateo, San Pablo, San Rafael, San Ramon, Santa Clara, Santa Rosa, Saratoga, Sausalito, Sebastopol, Sonoma, South San Francisco, St. Helena, Suisun City, Sunnyvale, Tiburon, Union City, Vacaville, Vallejo, Walnut Creek, Windsor, Woodside, Yountville.
-
+        
         We offer services for: Residential Christmas Light Installation, Commercial Christmas Light Installation, Custom Holiday Lighting Design, LED Christmas Light Installation, Tree Wrapping Lighting, Roofline Lighting, Landscape Holiday Lighting, and Wreath Hanging Services.
         
         Get festive with Silicon Valley Lights' Professional Christmas Lighting services in San Jose, San Francisco, Mountain View, Palo Alto, and across the Bay Area. Our experienced installers provide custom designs for a beautiful holiday experience. Book your installation now to save on energy-efficient LED holiday lighting solutions.
@@ -325,7 +337,7 @@
         Keywords for SEO: Christmas light installation, holiday lights Silicon Valley, professional holiday lighting, LED Christmas lights, San Jose Christmas lights, residential light installation, commercial holiday lighting, Bay Area holiday decor, energy-efficient holiday lighting, tree wrapping lights, roofline Christmas lights, festive exterior decorations, custom Christmas lighting displays, outdoor Christmas lighting installers, Christmas light maintenance, Silicon Valley holiday decorations, San Francisco holiday lighting.
     
         Serving the following cities: Alameda, Albany, American Canyon, Antioch, Atherton, Belmont, Benicia, Berkeley, Brentwood, Brisbane, Burlingame, Calistoga, Campbell, Clayton, Cloverdale, Colma, Concord, Corte Madera, Cotati, Cupertino, Daly City, Danville, Dixon, Dublin, East Palo Alto, El Cerrito, Emeryville, Fairfax, Fairfield, Foster City, Fremont, Gilroy, Half Moon Bay, Hayward, Healdsburg, Hercules, Hillsborough, Lafayette, Larkspur, Livermore, Los Altos, Los Altos Hills, Los Gatos, Martinez, Menlo Park, Mill Valley, Millbrae, Milpitas, Monte Sereno, Moraga, Morgan Hill, Mountain View, Napa, Newark, Novato, Oakland, Oakley, Orinda, Pacifica, Palo Alto, Petaluma, Piedmont, Pinole, Pittsburg, Pleasant Hill, Pleasanton, Portola Valley, Redwood City, Richmond, Rio Vista, Rohnert Park, Ross, San Anselmo, San Bruno, San Carlos, San Francisco, San Jose, San Leandro, San Mateo, San Pablo, San Rafael, San Ramon, Santa Clara, Santa Rosa, Saratoga, Sausalito, Sebastopol, Sonoma, South San Francisco, St. Helena, Suisun City, Sunnyvale, Tiburon, Union City, Vacaville, Vallejo, Walnut Creek, Windsor, Woodside, Yountville.
-
+        
         Silicon Valley Lights is your top choice for professional Christmas light installation services in Silicon Valley. We offer residential, commercial, and custom holiday lighting solutions designed to brighten up any property. Our experienced team handles every detail, from designing custom lighting to installing and maintaining it throughout the holiday season.
 
         Looking for professional holiday lighting installers in Silicon Valley? Silicon Valley Lights provides comprehensive holiday light installation services for homes and businesses. Our skilled professionals ensure safe, secure, and beautiful holiday displays using energy-efficient LED lights.
